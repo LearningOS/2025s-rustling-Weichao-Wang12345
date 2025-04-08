@@ -49,6 +49,20 @@ pub fn capitalize_words_vector(words: &[&str]) -> Vec<String> {
 // Return a single string.
 // ["hello", " ", "world"] -> "Hello World"
 pub fn capitalize_words_string(words: &[&str]) -> String {
+    // words.iter().map(|words|
+    //     {
+    //         let mut c = words.chars();
+    //         match c.next() {
+    //             None => String::new(),
+    //             Some(first) => {
+    //                let uppercase= first.to_string().to_uppercase();
+    //                uppercase+c.as_str()
+    //             },
+                
+    //         }
+    //     }).filter(|processed| !processed.is_empty()) // 过滤空字符串
+    //     .collect::<Vec<_>>()                       // 先收集到向量
+    //     .join("")  
     words.iter().map(|words|
         {
             let mut c = words.chars();
@@ -60,9 +74,7 @@ pub fn capitalize_words_string(words: &[&str]) -> String {
                 },
                 
             }
-        }).filter(|processed| !processed.is_empty()) // 过滤空字符串
-        .collect::<Vec<_>>()                       // 先收集到向量
-        .join("")  
+        }).collect()
     
 }
 
