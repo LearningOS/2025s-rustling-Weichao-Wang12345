@@ -23,6 +23,7 @@ fn sort<T: std::cmp::PartialOrd>(array: &mut [T]){
             j+=1;
         }
         i+=1;
+        
     }
 
 
